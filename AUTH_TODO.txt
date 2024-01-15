@@ -1,0 +1,36 @@
+To set up authentication for your EVE Online ESI API application and securely store user data, follow these steps:
+
+1. **Web Application Setup**:
+   - Use a web framework like Flask (for Python) to create a basic web application.
+   - Host this locally for development and testing purposes.
+
+2. **Implement OAuth 2.0 Flow**:
+   - Create a "Login with EVE Online" button on your web application.
+   - When clicked, redirect users to the EVE Online SSO URL with your client ID and required scopes.
+   - Define a callback/redirect URI in your application, which EVE Online will use to redirect users after authentication.
+
+3. **Handling the Redirect**:
+   - Once EVE Online redirects users back to your application, extract the authorization code from the query string.
+   - Exchange this code for an access token and a refresh token by making a POST request to EVE's token endpoint.
+
+4. **Securing Tokens and Data**:
+   - Store access tokens, refresh tokens, and sensitive user data securely.
+   - Consider using database encryption and environment variables for sensitive information.
+
+5. **Fetching and Storing User Data**:
+   - Use the access token to fetch user-specific data from the ESI API.
+   - Implement permissions logic to ensure users can only access their data or their corporation/alliance data as authorized.
+
+6. **Maintain and Refresh Tokens**:
+   - Regularly refresh the access token using the refresh token before it expires.
+   - Store the new access token securely.
+
+7. **Front-end Interface**:
+   - Develop a user-friendly interface for users to interact with their data.
+   - Ensure the interface is intuitive and clearly displays the information fetched from the API.
+
+8. **Test and Review**:
+   - Test the application thoroughly for functionality and security vulnerabilities.
+   - Regularly review and update the application to maintain security and functionality.
+
+This process requires a good understanding of web development, OAuth 2.0, and security best practices. Ensure that your implementation complies with CCP's API usage policies and data handling requirements.

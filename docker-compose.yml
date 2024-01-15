@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  frontend:
+    build: ./frontend
+    environment:
+      - ESI_KEY=${ESI_KEY}
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    environment:
+      - ESI_KEY=${ESI_KEY}
+      - DB_HOST=db
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=GIA_DB_USER
+      - POSTGRES_PASSWORD=GIA_DB_PASS=${DB_PASS}
+      - POSTGRES_DB=GIA_DB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

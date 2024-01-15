@@ -134,6 +134,21 @@ def fetch_groups_data():
         json.dump(groups_details, file, indent=4)
     print("Groups details data fetched and saved successfully.")
 
+## SAVE ALL DATA FROM TYPES ##
+def fetch_types_data():
+    with open('./gia_app/gia_app/import/data/universe/types.json', 'r') as file:
+        type_ids = json.load(file)
+
+    type_details = []
+    for type_id in type_ids:
+        details = fetch_types_details(type_id)
+        if details:
+            type_details.append(details)
+
+    with open('./gia_app/gia_app/import/data/universe/types_details.json', 'w') as file:
+        json.dump(type_details, file, indent=4)
+    print("Types details data fetched and saved successfully.")
+
 ## SAVE ALL DATA FROM GRAPHICS ##
 def fetch_graphics_data():
     with open('./gia_app/gia_app/import/data/universe/graphics.json', 'r') as file:
@@ -239,6 +254,7 @@ def main():
     # Fetch specific details
     fetch_category_data()
     fetch_groups_data()
+    fetch_types_data()
     fetch_graphics_data()
     fetch_constellations_data()
     fetch_regions_data()

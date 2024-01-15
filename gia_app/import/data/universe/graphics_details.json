@@ -12260,10 +12260,6 @@
         "graphic_id": 22322
     },
     {
-        "graphic_file": "res:/dx9/model/celestial/environment/cloud/volumetric/dungeons/6438/clouds_6438r2.red",
-        "graphic_id": 22323
-    },
-    {
         "graphic_file": "res:/dx9/model/celestial/environment/cloud/volumetric/dungeons/6438/clouds_6437r2.red",
         "graphic_id": 22324
     },
@@ -14265,13 +14261,6 @@
         "sof_fation_name": "minmatarnavy",
         "sof_hull_name": "mb1_t1",
         "sof_race_name": "minmatar"
-    },
-    {
-        "graphic_id": 2239,
-        "sof_dna": "ab1_t1:amarrnavy:amarr",
-        "sof_fation_name": "amarrnavy",
-        "sof_hull_name": "ab1_t1",
-        "sof_race_name": "amarr"
     },
     {
         "graphic_id": 2240,
@@ -18288,13 +18277,6 @@
         "sof_race_name": "triglavian"
     },
     {
-        "graphic_id": 3787,
-        "sof_dna": "gs7_wreck:gallentebase:gallente",
-        "sof_fation_name": "gallentebase",
-        "sof_hull_name": "gs7_wreck",
-        "sof_race_name": "gallente"
-    },
-    {
         "graphic_file": "res:\\FisFX\\Module\\TriglavianMaterialization_St_T1a.red",
         "graphic_id": 24495
     },
@@ -18613,13 +18595,6 @@
         "sof_fation_name": "genericbase",
         "sof_hull_name": "scm1_t1",
         "sof_race_name": "generic"
-    },
-    {
-        "graphic_id": 24531,
-        "sof_dna": "cde2_t1:guristas:caldari",
-        "sof_fation_name": "guristas",
-        "sof_hull_name": "cde2_t1",
-        "sof_race_name": "caldari"
     },
     {
         "graphic_id": 3825,
@@ -23412,10 +23387,6 @@
     {
         "graphic_file": "res:/dx9/scene/event/e06_a_cube.red",
         "graphic_id": 25126
-    },
-    {
-        "graphic_file": "res:/dx9/model/WorldObject/Planet/Template/Terrestrial/P_Terrestrial_18.red",
-        "graphic_id": 4418
     },
     {
         "graphic_id": 25127,

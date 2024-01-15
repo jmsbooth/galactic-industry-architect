@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    background-color: dimgray;
+    color: white;
+    padding: 40px 20px; /* Increased padding for thickness */
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+
+@media (max-width: 600px) {
+    .top-nav {
+        padding: 15px 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+.main-content {
+    padding: 20px;
+    background-color: white;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 60px;
+}
+
+#login-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.dark-mode {
+    background-color: dimgrey;
+    color: white;
+}
+
+.dark-mode .top-nav {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}

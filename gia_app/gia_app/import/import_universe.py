@@ -12,7 +12,7 @@ def fetch_and_save(endpoint, filename):
         response = requests.get(url)
         response.raise_for_status()  # This will raise an HTTPError if the HTTP request returned an unsuccessful status code
         data = response.json()
-        with open(f'./gia_app/gia_app/import/data/universe/{filename}.json', 'w') as file:
+        with open(f'data/universe/{filename}.json', 'w') as file:
             json.dump(data, file, indent=4, sort_keys=True)
         print(f"{filename} data fetched and saved successfully.")
     except requests.exceptions.RequestException as e:
@@ -106,7 +106,7 @@ def fetch_systems_details(system_id):
 
 ## SAVE ALL DATA FROM CATEGORIES ##
 def fetch_category_data():
-    with open('./gia_app/gia_app/import/data/universe/categories.json', 'r') as file:
+    with open('data/universe/categories.json', 'r') as file:
         category_ids = json.load(file)
 
     categories_details = []
@@ -115,13 +115,13 @@ def fetch_category_data():
         if details:
             categories_details.append(details)
 
-    with open('./gia_app/gia_app/import/data/universe/categories_details.json', 'w') as file:
+    with open('data/universe/categories_details.json', 'w') as file:
         json.dump(categories_details, file, indent=4)
     print("Categories details data fetched and saved successfully.")
 
 ## SAVE ALL DATA FROM GROUPS ##
 def fetch_groups_data():
-    with open('./gia_app/gia_app/import/data/universe/groups.json', 'r') as file:
+    with open('data/universe/groups.json', 'r') as file:
         group_ids = json.load(file)
 
     groups_details = []
@@ -130,13 +130,13 @@ def fetch_groups_data():
         if details:
             groups_details.append(details)
 
-    with open('./gia_app/gia_app/import/data/universe/groups_details.json', 'w') as file:
+    with open('data/universe/groups_details.json', 'w') as file:
         json.dump(groups_details, file, indent=4)
     print("Groups details data fetched and saved successfully.")
 
 ## SAVE ALL DATA FROM TYPES ##
 def fetch_types_data():
-    with open('./gia_app/gia_app/import/data/universe/types.json', 'r') as file:
+    with open('data/universe/types.json', 'r') as file:
         type_ids = json.load(file)
 
     type_details = []
@@ -145,13 +145,13 @@ def fetch_types_data():
         if details:
             type_details.append(details)
 
-    with open('./gia_app/gia_app/import/data/universe/types_details.json', 'w') as file:
+    with open('data/universe/types_details.json', 'w') as file:
         json.dump(type_details, file, indent=4)
     print("Types details data fetched and saved successfully.")
 
 ## SAVE ALL DATA FROM GRAPHICS ##
 def fetch_graphics_data():
-    with open('./gia_app/gia_app/import/data/universe/graphics.json', 'r') as file:
+    with open('data/universe/graphics.json', 'r') as file:
         graphic_ids = json.load(file)
 
     graphics_details = []
@@ -160,13 +160,13 @@ def fetch_graphics_data():
         if details:
             graphics_details.append(details)
 
-    with open('./gia_app/gia_app/import/data/universe/graphics_details.json', 'w') as file:
+    with open('data/universe/graphics_details.json', 'w') as file:
         json.dump(graphics_details, file, indent=4)
     print("Graphics details data fetched and saved successfully.")
 
 ## SAVE ALL DATA FROM CONSTELLATIONS ##
 def fetch_constellations_data():
-    with open('./gia_app/gia_app/import/data/universe/constellations.json', 'r') as file:
+    with open('data/universe/constellations.json', 'r') as file:
         constellation_ids = json.load(file)
 
     constellations_details = []
@@ -175,13 +175,13 @@ def fetch_constellations_data():
         if details:
             constellations_details.append(details)
 
-    with open('./gia_app/gia_app/import/data/universe/constellations_details.json', 'w') as file:
+    with open('data/universe/constellations_details.json', 'w') as file:
         json.dump(constellations_details, file, indent=4)
     print("Constellations details data fetched and saved successfully.")
 
 ## SAVE ALL DATA FROM REGIONS ##
 def fetch_regions_data():
-    with open('./gia_app/gia_app/import/data/universe/regions.json', 'r') as file:
+    with open('data/universe/regions.json', 'r') as file:
         region_ids = json.load(file)
 
     regions_details = []
@@ -190,13 +190,13 @@ def fetch_regions_data():
         if details:
             regions_details.append(details)
 
-    with open('./gia_app/gia_app/import/data/universe/regions_details.json', 'w') as file:
+    with open('data/universe/regions_details.json', 'w') as file:
         json.dump(regions_details, file, indent=4)
     print("Regions details data fetched and saved successfully.")
 
 ## SAVE ALL DATA FROM STRUCTURES ##
 def fetch_structures_data():
-    with open('./gia_app/gia_app/import/data/universe/structures.json', 'r') as file:
+    with open('data/universe/structures.json', 'r') as file:
         structure_ids = json.load(file)
 
     structures_details = []
@@ -205,13 +205,13 @@ def fetch_structures_data():
         if details:
             structures_details.append(details)
 
-    with open('./gia_app/gia_app/import/data/universe/structures_details.json', 'w') as file:
+    with open('data/universe/structures_details.json', 'w') as file:
         json.dump(structures_details, file, indent=4)
     print("Structures details data fetched and saved successfully.")
 
 ## SAVE ALL DATA FROM SYSTEMS ##
 def fetch_systems_data():
-    with open('./gia_app/gia_app/import/data/universe/systems.json', 'r') as file:
+    with open('data/universe/systems.json', 'r') as file:
         system_ids = json.load(file)
 
     systems_details = []
@@ -220,7 +220,7 @@ def fetch_systems_data():
         if details:
             systems_details.append(details)
 
-    with open('./gia_app/gia_app/import/data/universe/systems_details.json', 'w') as file:
+    with open('data/universe/systems_details.json', 'w') as file:
         json.dump(systems_details, file, indent=4)
     print("Systems details data fetched and saved successfully.")
 
